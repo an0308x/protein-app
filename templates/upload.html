@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Protein{% endblock %}
+
+{% block content %}
+<section class="card">
+  <h1>Upload a Protein (.pdb)</h1>
+  <p>Select a PDB file to generate a unique shareable URL.</p>
+
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".pdb" required />
+    <button type="submit">Upload</button>
+  </form>
+</section>
+{% endblock %}
